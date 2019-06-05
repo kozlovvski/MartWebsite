@@ -6,7 +6,10 @@ module.exports = {
     purgecss({
       content: ['./**/*.html'],
       whitelistPatterns: [/(--\w+)$/]
-    })
+    }),
+    require('cssnano')({
+      preset: 'default',
+    }),
   ],
   browsers: ['> 0.25%', 'ie >= 11']
 };
