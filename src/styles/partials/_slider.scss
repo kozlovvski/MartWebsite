@@ -1,0 +1,118 @@
+.slider {
+    position: relative;
+
+    width: 100%;
+    height: 30em;
+
+    &__item {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        box-sizing: border-box;
+        width: inherit;
+        height: inherit;
+        padding: 0 4em;
+
+        @include color(#fff);
+
+        font-weight: $fw-r;
+        text-align: center;
+        text-transform: uppercase;
+
+        &-title {
+            font-size: calc(1.5rem + 1.5vw);
+            font-weight: inherit;
+
+            span {
+                @include color($primary);
+    
+                font-weight: $fw-b;
+            }
+        }
+
+        &-button {
+            padding: 0.5em 1em;
+            border: 2px solid $primary;
+
+            color: inherit;
+            background: rgba(0,0,0,0.5);
+
+            font-size: calc(1rem + 0.5vw);
+            font-weight: $fw-b;
+            text-transform: inherit;
+
+            transition: background-color 0.5s;
+
+            &:hover {
+                background-color: $primary;
+            }
+        }
+
+        &-1 {
+            background: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url(../images/slider.jpg);
+            background-size: cover;
+        }
+
+        &-2 {
+            background: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url(../images/slider.jpg);
+            background-size: cover;
+        }
+
+        &-3 {
+            background: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url(../images/slider.jpg);
+            background-size: cover;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3em;
+        height: 3em;
+        padding: 0;
+        margin: 0;
+        border: none;
+
+        background-color: rgba($primary, 0.6);
+        transition: background-color 0.5s;
+        
+        z-index: 3;
+
+        &:hover {
+            background-color: $primary;
+        }
+
+        &-icon {
+            width: auto;
+            height: 1em;
+
+            fill: #fff;
+        }
+
+        &--left {
+            left: 0;
+        }
+
+        &--right {
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .slider__button {
+        display: none;
+    }
+
+    .slider__item {
+        padding: 0 2em;
+    }
+}

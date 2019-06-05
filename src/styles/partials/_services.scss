@@ -1,0 +1,29 @@
+.services {
+    padding: 50px 0;
+
+    &__grid {
+        list-style: none;
+    }
+
+    &__item {
+        @include color($gray);
+
+        text-align: center;
+
+        &-icon {
+            width: 4em;
+
+            fill: $gray;
+        }
+
+        &-title {
+            font-weight: $fw-b;
+            text-transform: uppercase;
+        }
+
+        &-description {
+            opacity: 0.7;
+            line-height: 1.3;
+        }
+    }
+}

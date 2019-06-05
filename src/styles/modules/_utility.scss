@@ -1,0 +1,49 @@
+.wrapper {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+.site-grid {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 40px;
+    
+        @media (max-width: 500px) {
+            display: block;
+        }
+
+        @media (min-width: 501px) and (max-width: 960px) {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.inline-icon {
+    display: inline-block;
+    height: 0.8em;
+    margin: 0 0.2em;
+}
+
+.section-title {
+    color: $dark-gray;
+    text-transform: uppercase;
+}
+
+@mixin color($color) {
+    color: $color;
+
+    .inline-icon {
+        fill: $color;
+    }
+}

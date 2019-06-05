@@ -1,0 +1,134 @@
+#user-navigation {
+    background-color: $primary;
+
+    z-index: 100;
+}
+
+#site-header {
+    position: sticky;
+    top: 0;
+
+    background: #fff;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__list {
+        display: flex;
+        padding: 0;
+
+        list-style-type: none;
+
+        &--visible {
+            display: flex !important;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__menu-button {
+        display: none;
+    }
+
+    &--user {
+        .navbar__link {
+            @include color(#fff);
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &--site {
+        .navbar__link {
+            font-weight: $fw-b;
+
+            @include color($dark-gray);
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus,
+            &--active {
+                @include color($primary);
+            }
+        }
+
+        .logo {
+            font-weight: $fw-r;
+            text-transform: uppercase;
+
+            &::first-letter {
+                color: $primary;
+
+                font-weight: $fw-b;
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    #user-navigation {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar--user {
+        .navbar {
+            &__list {
+                justify-content: space-evenly;
+                flex-grow: 1;
+
+                &--desktop-only {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .navbar--site {
+        flex-direction: column;
+
+        .navbar {
+            &__menu-button {
+                display: block;
+                border: none;
+                
+                background: none;
+
+                font-size: 1.5rem;
+            }
+
+            &__menu-header {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            &__list {
+                display: none;
+                flex-direction: column;
+                margin: 0;
+            }
+
+            &__item {
+                padding: 0.8em 0;
+                margin: auto;
+            }
+        }
+    }
+}

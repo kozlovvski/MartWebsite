@@ -1,0 +1,45 @@
+// 
+// modules
+// 
+
+@import "modules/variables";
+@import "modules/utility";
+
+// 
+// partials
+// 
+
+@import "partials/navbar";
+@import "partials/slider";
+@import "partials/services";
+
+// 
+// base
+// 
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff-ss;
+    font-weight: $fw-r;
+}
+
+button {
+    cursor: pointer;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: -99999px;
+    
+    padding: 10px;
+
+    background: #fff;
+
+    &:focus {
+        left: 0;
+    }
+}
