@@ -20,41 +20,41 @@ module.exports = {
     open: true,
   },
   module: {
-    rules: [{
-      test: /\.(sass|scss|css)$/,
-      use: [{
-          loader: MiniCssExtractPlugin.loader
-        },
-        {
-          loader: 'css-loader',
-          options: {
-            modules: false,
-            sourceMap: true
-          }
-        },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: true
-          }
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true
-          }
-        },
-      ]
-    },
-    {
-      test: /\.(png|jpg|gif|svg)$/,
-      use: [
-        {
+    rules: [
+      {
+        test: /\.(sass|scss|css)$/,
+        use: [{
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: false,
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [{
           loader: 'file-loader',
           options: {},
-        },
-      ],
-    }]
+        }, ],
+      }
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
