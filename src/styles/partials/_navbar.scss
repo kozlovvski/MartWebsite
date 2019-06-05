@@ -1,7 +1,5 @@
 #user-navigation {
     background-color: $primary;
-
-    z-index: 100;
 }
 
 #site-header {
@@ -9,8 +7,9 @@
     top: 0;
 
     background: #fff;
-
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+
+    z-index: 100;
 }
 
 .navbar {
@@ -53,6 +52,7 @@
     }
 
     &--site {
+
         .navbar__link {
             font-weight: $fw-b;
 

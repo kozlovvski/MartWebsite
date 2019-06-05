@@ -12,6 +12,8 @@
 @import "partials/navbar";
 @import "partials/slider";
 @import "partials/services";
+@import "partials/new-collection";
+@import "partials/product";
 
 // 
 // base
@@ -41,5 +43,25 @@ button {
 
     &:focus {
         left: 0;
+    }
+}
+
+.section-title {
+    margin: auto;
+    
+    color: $gray;
+
+    font-size: calc(1.5rem + 1vw);
+    text-transform: uppercase;
+    text-align: center;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 0.2em;
+        width: 200px;
+        margin: 0.5em auto;
+
+        background-color: $primary;
     }
 }

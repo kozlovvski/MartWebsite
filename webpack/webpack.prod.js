@@ -26,6 +26,12 @@ module.exports = {
         }
       },
       {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader'
+        }
+      },
+      {
         test: /\.(sass|scss|css)$/,
         use: [{
             loader: MiniCssExtractPlugin.loader
@@ -46,14 +52,12 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'images/[hash].[ext]',
-            },
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'images/[hash].[ext]',
           },
-        ],
+        }, ],
       }
     ]
   },

@@ -84,7 +84,7 @@
         background-color: rgba($primary, 0.6);
         transition: background-color 0.5s;
         
-        z-index: 3;
+        z-index: 2;
 
         &:hover {
             background-color: $primary;

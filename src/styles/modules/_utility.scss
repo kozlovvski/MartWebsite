@@ -35,11 +35,6 @@
     margin: 0 0.2em;
 }
 
-.section-title {
-    color: $dark-gray;
-    text-transform: uppercase;
-}
-
 @mixin color($color) {
     color: $color;
 
