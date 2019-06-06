@@ -1,0 +1,19 @@
+.season-sale {
+    padding: 10em 0;
+
+    color: white;
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url("../images/offer-bg.jpg");
+    background-size: cover;
+
+    text-align: center;
+
+    h2 {
+        font-size: calc(1.5em + 1.5vw);
+        font-weight: $fw-b;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: calc(1em + 1vw);
+    }
+}
