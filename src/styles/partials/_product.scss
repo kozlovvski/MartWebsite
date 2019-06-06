@@ -12,6 +12,8 @@
 
         grid-column: 1/3;
         grid-row: 1/2;
+
+        background-color: $light-blue;
     }
      
     &__name, &__price {
@@ -97,6 +99,46 @@
             &__hover {
                 transform: scale(1);
             }
+        }
+    }
+
+    &--hidden {
+        display: none;
+    }
+}
+
+.filter-list {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    margin: 3em auto;
+
+    list-style: none;
+
+    &__button {
+        display: block;
+        padding: 0.5em 1em;
+
+        border: 1px solid $dark-gray;
+        border-radius: 0.3em;
+         
+        background-color: #fff;
+        color: $gray;
+
+        text-transform: uppercase;
+
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover, &--active {
+            border-color: $primary;
+            
+            background-color: $primary;
+            color: #fff;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1em;
         }
     }
 }

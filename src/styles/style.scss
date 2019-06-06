@@ -14,6 +14,7 @@
 @import "partials/services";
 @import "partials/new-collection";
 @import "partials/product";
+@import "partials/featured_products";
 @import "partials/best-sellers";
 
 // 
@@ -56,13 +57,32 @@ button {
     text-transform: uppercase;
     text-align: center;
 
-    &::after {
-        content: "";
+    &__divider {
         display: block;
-        height: 0.2em;
+        position: relative;
         width: 200px;
-        margin: 0.5em auto;
+        height: 0.4em;
+        margin: 2em auto;
+        border: none;
 
         background-color: $primary;
+
+        &::before, &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 200px;
+            height: 0.2em;
+
+            background-color: $primary;
+        }
+
+        &::before {
+            top: -0.4em;
+        }
+
+        &::after {
+            bottom: -0.4em;
+        }
     }
 }
