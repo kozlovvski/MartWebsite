@@ -3,3 +3,54 @@
     
     background: #fff;
 }
+
+.filter-list {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    margin: 3em auto;
+
+    list-style: none;
+
+    &__button {
+        display: block;
+        padding: 0.5em 1em;
+
+        border: 1px solid $dark-gray;
+        border-radius: 0.3em;
+         
+        background-color: #fff;
+        color: $gray;
+
+        text-transform: uppercase;
+
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover, &--active {
+            border-color: $primary;
+            
+            background-color: $primary;
+            color: #fff;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+    }
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+        max-width: 10em;
+
+        &__button {
+            width: 100%;
+            text-align: center;
+
+            &:not(:last-child) {
+                margin-bottom: 1em;
+                margin-right: 0;
+            }
+        }
+    }
+}
