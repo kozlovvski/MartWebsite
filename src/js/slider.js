@@ -1,14 +1,26 @@
+// 
+// variables
+// 
+
 const buttonLeft = document.querySelector(".slider__button--left");
 const buttonRight = document.querySelector(".slider__button--right");
 
 const slides = document.getElementsByClassName("slider__item");
 const sliderContainer = document.querySelector(".slider__container");
 
-moveLastToFront();  
-window.setInterval(nextSlide, 5000);
+// 
+// MAIN
+// 
 
 buttonLeft.addEventListener("click", previousSlide);
 buttonRight.addEventListener("click", nextSlide);
+
+moveLastToFront();  
+let autoSlideChange = window.setInterval(nextSlide, 5000);
+
+// 
+// functions
+// 
     
 function previousSlide() {
     const currentSlide = document.querySelector(".slider__item--active");

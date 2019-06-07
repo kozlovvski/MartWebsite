@@ -1,0 +1,7 @@
+@mixin color($color) {
+    color: $color;
+
+    .inline-icon {
+        fill: $color;
+    }
+}

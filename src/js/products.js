@@ -1,5 +1,13 @@
+// 
+// variables
+// 
+
 const filterButtons = document.querySelectorAll(".filter-list__button");
 const featuredProducts = document.querySelectorAll(".product--featured");
+
+// 
+// MAIN
+// 
 
 filterButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -10,7 +18,11 @@ filterButtons.forEach(button => {
     });
 });
 
-const removeObsoleteClasses = () => {
+// 
+// functions
+// 
+
+function removeObsoleteClasses() {
     filterButtons.forEach(button => {
         button.classList.remove("filter-list__button--active");
     });
@@ -20,7 +32,7 @@ const removeObsoleteClasses = () => {
     });
 }
 
-const hideUnmatchingProducts = (currentCategory) => {
+function hideUnmatchingProducts(currentCategory) {
     //if category is "all" we want to show every product (so we don't want to hide any items)
     if(currentCategory != "all") {
         featuredProducts.forEach(product => {
