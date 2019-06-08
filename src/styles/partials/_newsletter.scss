@@ -1,0 +1,18 @@
+.newsletter {
+    padding: 100px 0;
+    background: url("../images/bg.png"), $primary;
+
+    &__cta {
+        @include color(#fff);
+
+        text-align: center;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        width: 100%;
+        max-width: 30rem;
+        margin: auto;
+    }
+}

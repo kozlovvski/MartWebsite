@@ -1,0 +1,33 @@
+.form {
+    font-size: 0; // to remove space between inline-blocks
+
+    &__input {
+        min-width: 0;
+        padding: 15px 20px;
+
+        border: 2px solid #fff;
+        border-radius: 5px;
+
+        background: none;
+
+        font-size: 1rem;
+
+        &--white {
+            background: #fff;
+            @include color($dark-gray);
+        }
+
+        &--primary {
+            background: $primary;
+            @include color(#fff);
+        }
+
+        &--right {
+            border-radius: 0 5px 5px 0;
+        }
+
+        &--left {
+            border-radius: 5px 0 0 5px;
+        }
+    }
+}
