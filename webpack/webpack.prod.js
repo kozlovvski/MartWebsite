@@ -61,9 +61,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      hash: true,
+      hash: false,
       template: './' + src_Path + '/index.html',
-      filename: 'index.[hash].html'
+      filename: 'index.html'
     })
   ]
 };
