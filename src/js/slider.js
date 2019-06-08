@@ -15,8 +15,8 @@ const sliderContainer = document.querySelector(".slider__container");
 buttonLeft.addEventListener("click", previousSlide);
 buttonRight.addEventListener("click", nextSlide);
 
-moveLastToFront();  
-let autoSlideChange = window.setInterval(nextSlide, 5000);
+moveLastToFront();  // so that when we slide to the left we have something to slide into
+let autoSlideChange = window.setInterval(nextSlide, 5000); // change slide every 5s
 
 // 
 // functions
@@ -27,6 +27,7 @@ function previousSlide() {
     currentSlide.classList.remove("slider__item--active");
     currentSlide.previousElementSibling.classList.add("slider__item--active");
     moveLastToFront();
+    resetInterval();
 }
 
 function nextSlide() {
@@ -34,6 +35,7 @@ function nextSlide() {
     currentSlide.classList.remove("slider__item--active");
     currentSlide.nextElementSibling.classList.add("slider__item--active");
     moveFirstToBack();
+    resetInterval();
 }
 
 function moveLastToFront() {
@@ -44,4 +46,11 @@ function moveLastToFront() {
 function moveFirstToBack() {
     const firstSlide = slides[0];
     sliderContainer.appendChild(firstSlide);
+}
+
+function resetInterval() {
+    clearInterval(autoSlideChange);
+    window.requestAnimationFrame(() => {
+        autoSlideChange = window.setInterval(nextSlide, 5000);
+    });
 }
