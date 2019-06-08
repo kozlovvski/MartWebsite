@@ -12,3 +12,4 @@ import './styles/style.scss';
 import "./js/products";
 import "./js/navbar";
 import "./js/slider";
+import "./js/customer-reviews";

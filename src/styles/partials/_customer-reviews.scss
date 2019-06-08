@@ -1,0 +1,118 @@
+.customer-reviews {
+    padding: 50px 0;
+}
+
+.review {
+    &__container {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 2em 0;
+        display: grid;
+
+        overflow: hidden;
+        list-style: none;
+
+        &::after {
+            content: "";
+            clear: both;
+        }
+    }
+
+    // so that elements stack on top of each other, but aren't removed from flow like if they were position: absolute
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    background-color: #fff;
+
+    text-align: center;
+
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+
+    &--active {
+        transform: translateX(0);
+
+        &~.review {
+            transform: translateX(100%);
+        }
+
+        ;
+    }
+
+    &__author-photo {
+        width: 15em;
+        height: 15em;
+        margin: 2em 0;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+    }
+
+    &__author-name {
+        margin-bottom: 0;
+
+        @include color($primary);
+
+        font-size: calc(1rem + .2vw);
+        font-weight: $fw-b;
+        text-transform: uppercase;
+
+        &::before {
+            content: "— ";
+        }
+
+        &::after {
+            content: " —";
+        }
+    }
+
+    &__text,
+    &__author-location {
+        width: 100%;
+        max-width: 60em;
+        margin: 0;
+
+        opacity: 0.7;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 2em 0;
+
+        list-style: none;
+    }
+
+    &__select {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &-image {
+            width: 5em;
+            height: 5em;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+            border: 0.3em solid $gray;
+
+            filter: grayscale(100%);
+            transition: 0.5s ease;
+        }
+
+        &--active .review__select-image,
+        &:hover .review__select-image {
+            border-color: $primary;
+            filter: none;
+        }
+    }
+}

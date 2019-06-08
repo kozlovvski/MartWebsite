@@ -19,7 +19,7 @@
 @import "partials/featured-products";
 @import "partials/season-sale";
 @import "partials/best-sellers";
-@import "partials/customer-review";
+@import "partials/customer-reviews";
 
 // 
 // base
@@ -32,6 +32,11 @@
 body {
     font-family: $ff-ss;
     font-weight: $fw-r;
+}
+
+p {
+    font-size: calc(.8rem + .2vw);
+    line-height: 1.5;
 }
 
 button {
