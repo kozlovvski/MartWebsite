@@ -1,0 +1,21 @@
+.our-partners {
+    padding: 50px 0;    
+
+    background-color: $light-blue;
+
+    &__container {
+        list-style: none;
+    }
+
+    &__partner {
+        width: 100%;
+
+        border: 1px solid $primary;
+
+        background-color: #fff;
+
+        &-image {
+            width: 100%;
+        }
+    }
+}
