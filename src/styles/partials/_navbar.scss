@@ -67,17 +67,6 @@
                 @include color($primary);
             }
         }
-
-        .logo {
-            font-weight: $fw-r;
-            text-transform: uppercase;
-
-            &::first-letter {
-                color: $primary;
-
-                font-weight: $fw-b;
-            }
-        }
     }
 }
 

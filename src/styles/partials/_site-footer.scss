@@ -1,0 +1,15 @@
+.site-footer {
+    padding: 10px 0;
+
+    color: #fff;
+    background-color: $dark-gray;
+
+    text-align: center;
+
+    &__copyright {
+        a {
+            color: $primary;
+            font-weight: $fw-b;
+        }
+    }
+}

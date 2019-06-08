@@ -1,7 +1,6 @@
 .site-grid {
     &__container {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
         column-gap: 40px;
         padding: 0;
         margin: 0;
@@ -10,8 +9,16 @@
             display: block;
         }
 
-        @media (min-width: 501px) and (max-width: 960px) {
+        &--2-columns {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        &--4-columns {
+            grid-template-columns: repeat(4, 1fr);
+
+            @media (min-width: 501px) and (max-width: 960px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     }
 
@@ -19,5 +26,9 @@
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
+
+        &--2-columns {
+            grid-column: span 2;
+        }
     }
 }

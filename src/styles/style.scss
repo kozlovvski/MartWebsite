@@ -7,6 +7,7 @@
 @import "modules/mixins";
 @import "modules/site-grid";
 @import "modules/form";
+@import "modules/product";
 
 // 
 // partials
@@ -16,13 +17,14 @@
 @import "partials/slider";
 @import "partials/services";
 @import "partials/new-collection";
-@import "partials/product";
 @import "partials/featured-products";
 @import "partials/season-sale";
 @import "partials/best-sellers";
 @import "partials/customer-reviews";
 @import "partials/newsletter";
 @import "partials/our-partners";
+@import "partials/get-in-touch";
+@import "partials/site-footer";
 
 // 
 // base
@@ -57,6 +59,17 @@ button {
 
     &:focus {
         left: 0;
+    }
+}
+
+.logo {
+    font-weight: $fw-r;
+    text-transform: uppercase;
+
+    &::first-letter {
+        color: $primary;
+
+        font-weight: $fw-b;
     }
 }
 

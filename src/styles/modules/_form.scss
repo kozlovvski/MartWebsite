@@ -2,11 +2,17 @@
     font-size: 0; // to remove space between inline-blocks
 
     &__input {
+        display: block;
         min-width: 0;
         padding: 15px 20px;
 
         border: 2px solid #fff;
         border-radius: 5px;
+
+        @include color(#fff);
+        &::placeholder {
+            @include color(#fff);
+        }
 
         background: none;
 
@@ -19,7 +25,7 @@
 
         &--primary {
             background: $primary;
-            @include color(#fff);
+            border-color: $primary;
         }
 
         &--right {
@@ -29,5 +35,20 @@
         &--left {
             border-radius: 5px 0 0 5px;
         }
+    }
+
+    &__label {
+        display: block;
+
+        font-size: 0.9rem;
+        font-weight: $fw-b;
+
+        .form__input {
+            margin-top: 0.3em;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
     }
 }

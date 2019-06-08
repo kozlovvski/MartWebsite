@@ -138,7 +138,7 @@
     <!-- SERVICES -->
     <section class="services">
       <div class="wrapper">
-        <ul class="services__grid site-grid__container">
+        <ul class="services__grid site-grid__container site-grid__container--4-columns">
 
           <!-- 1st service -->
           <li class="services__item site-grid__item">
@@ -200,7 +200,7 @@
       <div class="wrapper">
         <h2 class="section-title">New Collection</h2>
         <hr class="section-title__divider">
-        <ul class="site-grid__container">
+        <ul class="site-grid__container site-grid__container--4-columns">
 
           <!-- 1st product -->
           <li class="site_grid__item product">
@@ -348,7 +348,7 @@
           <li class="filter-list__button">Accessories</li>
           <li class="filter-list__button">Miscellaneous</li>
         </ul>
-        <ul class="site-grid__container">
+        <ul class="site-grid__container site-grid__container--4-columns">
 
           <!-- 1st featured product -->
           <li class="site_grid__item product product--featured" data-product-categories="shoes">
@@ -630,7 +630,7 @@
       <div class="wrapper">
         <h2 class="section-title">Best Sellers</h2>
         <hr class="section-title__divider">
-        <ul class="site-grid__container">
+        <ul class="site-grid__container site-grid__container--4-columns">
 
           <!-- 1st product -->
           <li class="site_grid__item product">
@@ -773,6 +773,8 @@
         <h2 class="section-title">Customer Review</h2>
         <hr class="section-title__divider">
         <ul class="review__container">
+
+          <!-- 1st review -->
           <li class="review review--active" data-review-number="1">
             <img src="<%=require('./images/member1.png')%>" alt="Photo of Olivia, one of our reviewers"
               class="review__author-photo">
@@ -783,6 +785,8 @@
             <p class="review__author-name">Olivia</p>
             <p class="review__author-location">Melbourne, Australia</p>
           </li>
+
+          <!-- 2nd review -->
           <li class="review" data-review-number="2">
             <img src="<%=require('./images/member2.png')%>" alt="Photo of Adam, one of our reviewers"
               class="review__author-photo">
@@ -793,6 +797,8 @@
             <p class="review__author-name">Adam</p>
             <p class="review__author-location">Melbourne, Australia</p>
           </li>
+
+          <!-- 3rd review -->
           <li class="review" data-review-number="3">
             <img src="<%=require('./images/member3.png')%>" alt="Photo of Anna, one of our reviewers"
               class="review__author-photo">
@@ -804,15 +810,23 @@
             <p class="review__author-location">Melbourne, Australia</p>
           </li>
         </ul>
+
+        <!-- buttons -->
         <ul class="review__buttons">
+
+          <!-- 1st button -->
           <li class="review__select review__select--active" data-button-for-review="1">
             <img src="<%=require('./images/member1.png')%>" alt="Photo of Olivia, one of our reviewers"
               class="review__select-image">
           </li>
+
+          <!-- 2nd button -->
           <li class="review__select" data-button-for-review="2">
             <img src="<%=require('./images/member2.png')%>" alt="Photo of Adam, one of our reviewers"
               class="review__select-image">
           </li>
+
+          <!-- 3rd button -->
           <li class="review__select" data-button-for-review="3">
             <img src="<%=require('./images/member3.png')%>" alt="Photo of Anna, one of our reviewers"
               class="review__select-image">
@@ -820,40 +834,52 @@
         </ul>
       </div>
     </section>
+
+    <!-- NEWSLETTER -->
     <section class="newsletter">
       <div class="wrapper">
         <h3 class="newsletter__cta">Follow a collection of news & promotions</h3>
         <form action="" method="post" class="newsletter__form form">
           <input type="email" placeholder="Enter your e-mail..."
             class="form__input form__input--white form__input--left" title="Input your e-mail address here:">
-          <input type="submit" class="form__input form__input--primary form__input--right"
+          <input type="submit" class="form__input form__input--right"
             title="Click here to send the form" value="Sign in">
         </form>
       </div>
     </section>
+
+    <!-- OUR PARTNERS -->
     <section class="our-partners">
       <div class="wrapper">
         <h2 class="section-title">Our partners</h2>
         <hr class="section-title__divider">
-        <ul class="site-grid__container our-partners__container">
+        <ul class="site-grid__container site-grid__container--4-columns our-partners__container">
+
+          <!-- 1st partner -->
           <li class="site-grid__item our-partners__partner">
             <a href="#">
               <img src="<%=require('./images/client_01.jpg')%>" alt="Howard University logo"
                 class="our-partners__partner-image">
             </a>
           </li>
+
+          <!-- 2nd partner -->
           <li class="site-grid__item our-partners__partner">
             <a href="#">
               <img src="<%=require('./images/client_02.jpg')%>" alt="Auburn University logo"
                 class="our-partners__partner-image">
             </a>
           </li>
+
+          <!-- 3rd partner -->
           <li class="site-grid__item our-partners__partner">
             <a href="#">
               <img src="<%=require('./images/client_03.jpg')%>" alt="Marquette University logo"
                 class="our-partners__partner-image">
             </a>
           </li>
+
+          <!-- 4th partner -->
           <li class="site-grid__item our-partners__partner">
             <a href="#">
               <img src="<%=require('./images/client_04.jpg')%>" alt="Bloomsburg University logo"
@@ -863,6 +889,53 @@
         </ul>
       </div>
     </section>
+
+    <!-- GET IN TOUCH -->
+    <section class="get-in-touch">
+      <div class="wrapper">
+        <h2 class="section-title">Get in touch</h2>
+        <hr class="section-title__divider">
+        <div class="site-grid__container site-grid__container--2-columns">
+
+          <!-- contact info -->
+          <div class="site-grid__item contact-data">
+            <h1 class="logo">Mart</h1>
+            <h3 class="contact-data__sub">We'd love To Meet You In Person Or Via The Web!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ab non voluptates suscipit ipsa aliquam, aut
+              iste explicabo perferendis velit cum.</p>
+            <p><span>Main Office: </span>123 Elm St. New York City, NY</p>
+            <p><span>Phone: </span><a href="tel:+1.555.555.5555">1.555.555.5555</a></p>
+            <p><span>E-mail: </span><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+          </div>
+
+          <!-- contact form -->
+          <form action="" method="post"
+            class="site-grid__item site-grid__container site-grid__container--2-columns form contact-form">
+            <label for="contact-name" class="site-grid__item form__label">
+              Your name:
+              <input type="text" id="contact-name" name="contact-name" class="form__input" placeholder="Steve">
+            </label>
+            <label for="contact-email" class="site-grid__item form__label">
+              Your e-mail:
+              <input type="text" id="contact-email" name="contact-email" class="form__input" placeholder="steve@domain.com">
+            </label>
+            <label for="contact-message" class="site-grid__item site-grid__item--2-columns form__label">
+                Your message:
+                  <textarea name="contact-message" id="contact-message" rows="4"class="form__input form__textarea" rows="4" placeholder="Type here..."></textarea>
+              </label>
+            <input type="submit" class="site-grid__item form__input form__input--primary" value="Send message">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p class="site-footer__copyright">Coded with ❤ by <a href="https://github.com/kozlovvski">@kozlovvski</a>.
+          Design by <a href="https://revolthemes.net">Revolt Themes</a></p>
+      </div>
+    </footer>
   </main>
 </body>
 
