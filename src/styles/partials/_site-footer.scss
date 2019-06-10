@@ -12,4 +12,8 @@
             font-weight: $fw-b;
         }
     }
+
+    @media (max-width: 780px) {
+        padding-bottom: 60px;
+    }
 }
