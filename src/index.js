@@ -20,8 +20,10 @@ window.onscroll = function () {
     window.scrollTo(0, 0); //prevent scrolling when preloader is visible;
 };
 
-window.onload = function() {
-    document.querySelector(".preloader").classList.add("preloader--hidden");
-    window.onscroll = undefined;
-    document.body.style.overflow = "auto";
+window.onload = function () {
+    setTimeout(() => {
+        document.querySelector(".preloader").classList.add("preloader--hidden");
+        window.onscroll = undefined;
+        document.body.style.overflow = "auto";
+    }, 500); // add a slight delay so that the preloader doesn't flicker if page loads fast
 }
