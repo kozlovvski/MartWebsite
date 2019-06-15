@@ -8,6 +8,7 @@
 @import "modules/site-grid";
 @import "modules/form";
 @import "modules/product";
+@import "modules/preloader";
 
 // 
 // partials
@@ -37,6 +38,8 @@
 body {
     font-family: $ff-ss;
     font-weight: $fw-r;
+
+    overflow: hidden;
 }
 
 p {

@@ -1,7 +1,7 @@
 #user-navigation {
     background-color: $primary;
 
-    z-index: 99;
+    z-index: 3;
 }
 
 #site-header {
@@ -11,7 +11,7 @@
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 
-    z-index: 100;
+    z-index: 4;
 }
 
 .navbar {

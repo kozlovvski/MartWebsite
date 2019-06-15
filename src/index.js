@@ -13,5 +13,15 @@ import "./js/products";
 import "./js/navbar";
 import "./js/slider";
 import "./js/customer-reviews";
-
+import "lazyload";
 lazyload(); // this makes sure that all images with "lazyload" class will be lazy-loaded
+
+window.onscroll = function () {
+    window.scrollTo(0, 0); //prevent scrolling when preloader is visible;
+};
+
+window.onload = function() {
+    document.querySelector(".preloader").classList.add("preloader--hidden");
+    window.onscroll = undefined;
+    document.body.style.overflow = "auto";
+}
