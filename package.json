@@ -33,6 +33,7 @@
     "webpack-dev-server": "^3.6.0"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "normalize.css": "^8.0.1"
   }
 }
