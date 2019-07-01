@@ -26,4 +26,8 @@ window.onload = function () {
         window.onscroll = undefined;
         document.body.style.overflow = "auto";
     }, 500); // add a slight delay so that the preloader doesn't flicker if page loads fast
+
+    setTimeout(() => {
+        document.querySelector(".preloader").remove()
+    }, 1000)
 }
