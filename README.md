@@ -1,4 +1,4 @@
-# MediplusWebsite
+# MartWebsite
 
 This project is a framework-less website template build using Webpack. It uses SCSS to make CSS more readable.
 
